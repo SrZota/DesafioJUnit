@@ -61,3 +61,9 @@ Terceiro caso de teste: Erros encontrados.
 - org.opentest4j.AssertionFailedError:
 - O erro ocorria por conta dos retornos das condicionais não estarem de acordo com a definição feita originalmente.
 
+Correção implementada:
+
+- Ajustado o retorno das condições para que a mesma se adequasse ao definido no escopo.
+
+Após realizar estas correções o test retornou:
+- Process finished with exit code 0. 
