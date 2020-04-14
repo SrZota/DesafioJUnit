@@ -67,3 +67,49 @@ Correção implementada:
 
 Após realizar estas correções o test retornou:
 - Process finished with exit code 0. 
+
+Códigos corrigidos:
+
+classe JulgamentoPrisioneiro:  
+
+public class JulgamentoPrisioneiro { 
+ 
+    private int PENA_INOCENCIA = 0; 
+    private int PENA_CONDENACAO_MUTUA = 5; 
+    private int PENA_CONDENACAO_INDIVIDUAL = 10; 
+    private int PENA_CONDENACAO_CUMPLICES = 1; 
+ 
+    public int calculaPena(String respostaPrisioneiroA, String respostaPrisioneiroB) { 
+        if (respostaPrisioneiroA.equals("Culpado") ) { 
+            if (respostaPrisioneiroB.equals("Culpado")) { 
+                return PENA_CONDENACAO_MUTUA; 
+            } else { 
+                return PENA_CONDENACAO_INDIVIDUAL; 
+            } 
+        } else { 
+            if (respostaPrisioneiroB.equals("Culpado")) { 
+                return PENA_CONDENACAO_CUMPLICES; 
+            } else { 
+                return PENA_INOCENCIA; 
+            } 
+        } 
+    } 
+} 
+
+Os testes não foram alterados, segue versão final: 
+
+ 
+
+public class JulgamentoPrisioneiroTest { 
+ 
+    @Test 
+    public void calculaPenaTest() { 
+ 
+        JulgamentoPrisioneiro julgamentoPrisioneiro = new JulgamentoPrisioneiro(); 
+ 
+        assertEquals(0, julgamentoPrisioneiro.calculaPena("Inocente", "Inocente")); 
+        assertEquals(5, julgamentoPrisioneiro.calculaPena("Culpado", "Culpado")); 
+        assertEquals(10, julgamentoPrisioneiro.calculaPena("Culpado", "Inocente")); 
+        assertEquals(1, julgamentoPrisioneiro.calculaPena("Inocente", "Culpado")); 
+    } 
+}  
