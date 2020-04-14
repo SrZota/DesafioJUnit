@@ -43,7 +43,6 @@ public class JulgamentoPrisioneiro {
 				}
 			}
 		}
-		return PENA_INOCENCIA;
 	}
 }
 
@@ -56,3 +55,9 @@ Segundo caso de teste: Erros encontrados.
 Correção implementada:
 
 - Valor das constantes foi alterado de acordo com o valor presente nos algoritmos.
+
+Terceiro caso de teste: Erros encontrados.
+
+- org.opentest4j.AssertionFailedError:
+- O erro ocorria por conta dos retornos das condicionais não estarem de acordo com a definição feita originalmente.
+
