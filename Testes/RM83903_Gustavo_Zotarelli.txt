@@ -46,3 +46,10 @@ public class JulgamentoPrisioneiro {
 		return PENA_INOCENCIA;
 	}
 }
+
+
+Segundo caso de teste: Erros encontrados.
+
+- org.opentest4j.AssertionFailedError:  
+- Erro ocorrido devido o valor das constantes ter sido definido de maneira errada.
+
