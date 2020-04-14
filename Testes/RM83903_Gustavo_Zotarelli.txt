@@ -1,0 +1,17 @@
+Primeiro teste: Teste de Inocência - JUNIT
+
+Erro encontrado:
+- java.lang.Error:Unresolved compilation problem:
+- Houveram problema na compilação causados pela ausência da classe Resposta, a mesma não é encontrada no algoritmo e tem de possuir dados do tipo String.
+
+class TesteCalculoDePena {
+
+	@Test
+	void testeCalcularPenaInocencia() {
+		JulgamentoPrisioneiro julgamento = new JulgamentoPrisioneiro();
+		int pena = julgamento.calculaPena("Inocente", "Inocente");
+
+		assertEquals(0, pena);
+	}
+
+}
